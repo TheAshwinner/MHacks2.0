@@ -19,7 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Selling"></activity>
+        <activity android:name=".Selling" />
+        <activity android:name=".Buying"></activity>
     </application>
 
 </manifest>
