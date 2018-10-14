@@ -25,20 +25,22 @@ private Button button2;
 
             }
         });
+
+        //Define the Switching Activities Button
+        button2 = (Button) findViewById(R.id.buyBtn);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openBuying();
+            }
+        });
         }
 
         public void openSelling() {
             Intent intent = new Intent(this, Selling.class);
             startActivity(intent);
 
-            //Define the Switching Activities Button
-            button2 = (Button) findViewById(R.id.buyBtn);
-            button2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    openBuying();
-                }
-        });
+
         }
 
         public void openBuying() {
