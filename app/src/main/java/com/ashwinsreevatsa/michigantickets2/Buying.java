@@ -95,6 +95,7 @@ public class Buying extends AppCompatActivity {
                 holder.setGame(model.getGame());
                 holder.setSeat(model.getSeatNum());
                 holder.setPrice(model.getPrice());//TODO Change- this is meant for the populateviewholder method which doesn't exist
+                holder.setPhoneNumber(model.getPhoneNumber());
             }
 
             @NonNull
@@ -134,6 +135,12 @@ public class Buying extends AppCompatActivity {
             }
             String priceString = "Price: " + price;
             priceView.setText(priceString);
+        }
+
+        public void setPhoneNumber(String phoneNumber){
+            TextView phoneNumberView = (TextView)mView.findViewById(R.id.ListPhoneNumber);
+            String phoneNumberString = "Phone Number: " + phoneNumber;
+            phoneNumberView.setText(phoneNumberString);
         }
     }
 }
