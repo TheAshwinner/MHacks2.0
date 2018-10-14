@@ -8,6 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 
+import com.ashwinsreevatsa.michigantickets2.Data.Ticket;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Selling extends AppCompatActivity {
     private Button homeButton;
     private Button submitButton;
@@ -15,6 +19,7 @@ public class Selling extends AppCompatActivity {
     private Spinner sectionSpinner;
     private Spinner priceSpinner;
 
+    private DatabaseReference firebaseDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,13 +41,21 @@ public class Selling extends AppCompatActivity {
                 }
         });
 
+
+
+        //Getting reference for firebase db so it can be accessed later on
+        firebaseDb = FirebaseDatabase.getInstance().getReference();
+
         //Creating submit button
         submitButton = (Button) findViewById(R.id.submitBtn);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Check if all fields are entered; if they are, submit, if not let user know
-                
+
+                Ticket testTicket = new Ticket("Indiana","27",15,
+                        26,"Ashwin Sreevatsa",1234567890, 100.0); //TODO change this so that it takes the value given
+                firebaseDb.push().setValue(testTicket);
             }
         });
 
