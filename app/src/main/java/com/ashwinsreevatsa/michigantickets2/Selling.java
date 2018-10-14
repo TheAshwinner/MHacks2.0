@@ -75,7 +75,7 @@ public class Selling extends AppCompatActivity {
 //                    Ticket testTicket = new Ticket("Indiana", "27", 15,
 //                            26, "Ashwin Sreevatsa", 1234567890, 100.0); //TODO change this so that it takes the value given
 //                    firebaseDb.push().setValue(testTicket);
-
+                    Log.v("Missing data", "This is true");
                 } else {
                     Log.v("Missing data", "Please fill in all data fields");
                 }//TODO if the get ticket method returns false, tell user to fill in fields
@@ -143,8 +143,10 @@ public class Selling extends AppCompatActivity {
             phoneNumber = editPhoneNum.getText().toString();
             price = priceSpinner.getSelectedItem().toString();
         } catch (Exception e){
+            Log.v("Missing Data","This should return false");
             return false;
         }
+        Log.v("Missing Data","true");
         return true;
     }
     private Ticket createTicketObject(){

@@ -18,7 +18,7 @@ public class Buying extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buying);
 
-        //Getting reference for firebase db so it can be accessed later on
+//Getting reference for firebase db so it can be accessed later on
         firebaseDb = FirebaseDatabase.getInstance().getReference();
 
     }

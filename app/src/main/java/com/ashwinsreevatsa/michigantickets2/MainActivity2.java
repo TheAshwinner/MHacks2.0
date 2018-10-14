@@ -25,6 +25,21 @@ public class MainActivity2 extends AppCompatActivity {
 
             }
         });
+<<<<<<< HEAD
+||||||| merged common ancestors
+        }
+=======
+
+        //Define the Switching Activities Button
+        button2 = (Button) findViewById(R.id.buyBtn);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openBuying();
+            }
+        });
+        }
+>>>>>>> 0e25016c74d8402b738da0dff3ee61ed1b294cfb
 
         //Define the Switching Activities Button
         button2 =(Button)
@@ -32,6 +47,7 @@ public class MainActivity2 extends AppCompatActivity {
                 findViewById(R.id.buyBtn);
         button2.setOnClickListener(new View.OnClickListener()
 
+<<<<<<< HEAD
         {
             @Override
             public void onClick (View v){
@@ -47,6 +63,20 @@ public class MainActivity2 extends AppCompatActivity {
 
 
     }
+||||||| merged common ancestors
+            //Define the Switching Activities Button
+            button2 = (Button) findViewById(R.id.buyBtn);
+            button2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openBuying();
+                }
+        });
+        }
+=======
+
+        }
+>>>>>>> 0e25016c74d8402b738da0dff3ee61ed1b294cfb
 
         public void openBuying() {
             Intent intent = new Intent(this, Buying.class);
