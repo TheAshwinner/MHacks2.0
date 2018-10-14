@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1011574645733",
+    "firebase_url": "https://mhacks2018-3a7d5.firebaseio.com",
+    "project_id": "mhacks2018-3a7d5",
+    "storage_bucket": "mhacks2018-3a7d5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011574645733:android:401cf00ea81c1695",
+        "android_client_info": {
+          "package_name": "com.ashwinsreevatsa.michigantickets2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011574645733-5q70gl77tbgeda2g535g4t1gvnvp47kf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ashwinsreevatsa.michigantickets2",
+            "certificate_hash": "3b72d7318b56b2871b9dd7e40c519700d6ba3d22"
+          }
+        },
+        {
+          "client_id": "1011574645733-bh2grdlh3f10gq79q8lemfgjorlcv7qr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoGpKIpM2Aov-H8QtYsMdVbzRwa8nUqgc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011574645733-bh2grdlh3f10gq79q8lemfgjorlcv7qr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
