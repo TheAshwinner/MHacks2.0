@@ -72,9 +72,6 @@ public class Selling extends AppCompatActivity {
                     Ticket ticketItem = createTicketObject();
                     firebaseDb.child("Tickets").push().setValue(ticketItem);
 
-//                    Ticket testTicket = new Ticket("Indiana", "27", 15,
-//                            26, "Ashwin Sreevatsa", 1234567890, 100.0); //TODO change this so that it takes the value given
-//                    firebaseDb.push().setValue(testTicket);
                     Log.v("Missing data", "This is true");
                 } else {
                     Log.v("Missing data", "Please fill in all data fields");
