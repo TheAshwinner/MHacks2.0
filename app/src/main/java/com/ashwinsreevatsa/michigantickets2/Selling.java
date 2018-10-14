@@ -132,6 +132,10 @@ public class Selling extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     *
+     * @return true if all values are selected properly, false if fields are empty
+     */
     private Boolean getTicketValues(){
         //Extract all needed values
         try {
@@ -142,6 +146,15 @@ public class Selling extends AppCompatActivity {
             name = editName.getText().toString();
             phoneNumber = editPhoneNum.getText().toString();
             price = priceSpinner.getSelectedItem().toString();
+
+            //If these values are empty, return false
+            if(seatRow == "" || name == "" || phoneNumber == ""){
+                return false;
+            } else if(game == " ----- "|| seatSection == " ----- " || price == " ----- "){
+                return false;
+            }
+
+
         } catch (Exception e){
             Log.v("Missing Data","This should return false");
             return false;
