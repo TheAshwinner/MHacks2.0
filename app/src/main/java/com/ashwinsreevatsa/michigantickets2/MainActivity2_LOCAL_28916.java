@@ -26,12 +26,15 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
 
-
         //Define the Switching Activities Button
-        button2 = (Button) findViewById(R.id.buyBtn);
-        button2.setOnClickListener(new View.OnClickListener() {
+        button2 =(Button)
+
+                findViewById(R.id.buyBtn);
+        button2.setOnClickListener(new View.OnClickListener()
+
+        {
             @Override
-            public void onClick(View v) {
+            public void onClick (View v){
                 openBuying();
             }
         });
@@ -41,14 +44,14 @@ public class MainActivity2 extends AppCompatActivity {
     public void openSelling() {
         Intent intent = new Intent(this, Selling.class);
         startActivity(intent);
-    }
-    
 
-    public void openBuying() {
-            Intent intent = new Intent(this, com.ashwinsreevatsa.michigantickets2.Buying.class);
+
+    }
+
+        public void openBuying() {
+            Intent intent = new Intent(this, Buying.class);
             startActivity(intent);
 
+        }
     }
-}
-
 
