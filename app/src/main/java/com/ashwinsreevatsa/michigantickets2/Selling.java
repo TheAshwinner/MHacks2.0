@@ -9,8 +9,11 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 public class Selling extends AppCompatActivity {
-    private Button button;
-
+    private Button homeButton;
+    private Button submitButton;
+    private Spinner gameSpinner;
+    private Spinner sectionSpinner;
+    private Spinner priceSpinner;
 
 
     @Override
@@ -18,33 +21,68 @@ public class Selling extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_selling);
 
-        Spinner dropdown = findViewById(R.id.gameSpinner);
-        String[] items = new String[]{" ----- ", "Western Michigan","SMU" , "Nebraska", "Maryland", "Wisconsin", "Penn State", "Indiana"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        dropdown.setAdapter(adapter);
+        //Create spinners in homepage
+        createGameSpinner();
+        createSectionSpinner();
+        createpriceSpinner();
 
-        Spinner dropdown2 = findViewById(R.id.sectionSpinner);
-        String[] items2 = new String[]{" ----- ", "25","26" , "27", "28", "29", "30", "31", "32", "33"};
-        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items2);
-        dropdown2.setAdapter(adapter2);
-
-        Spinner dropdown3 = findViewById(R.id.priceSpinner);
-        String[] items3 = new String[]{" ----- ", "$5","$10" , "$15", "$20", "$25", "30", "$35", "$40", "$45", "$50", "$55", "$60", "$65", "$70", "$75", "$80", "$85", "$90", "$95", "$100", "$100+"};
-        ArrayAdapter<String> adapter3 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items3);
-        dropdown3.setAdapter(adapter3);
 
         //Define the Switching Activities Button
-        button = (Button) findViewById(R.id.homeBtn);
-        button.setOnClickListener(new View.OnClickListener() {
+        homeButton = (Button) findViewById(R.id.homeBtn);
+        homeButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                 openMainActivity2();
                 }
         });
+
+        //Creating submit button
+        submitButton = (Button) findViewById(R.id.submitBtn);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Check if all fields are entered; if they are, submit, if not let user know
+                
+            }
+        });
+
+    }
+
+
+    /**
+     * Creates spinner to select game for ticket
+     */
+    private void createGameSpinner() {
+        gameSpinner = findViewById(R.id.gameSpinner);
+        String[] items = new String[]{" ----- ", "Western Michigan","SMU" , "Nebraska", "Maryland", "Wisconsin", "Penn State", "Indiana"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        gameSpinner.setAdapter(adapter);
+    }
+
+    /**
+     * Creates spinner to select the section for ticket
+     */
+    private void createSectionSpinner() {
+        sectionSpinner = findViewById(R.id.sectionSpinner);
+        String[] items2 = new String[]{" ----- ", "25","26" , "27", "28", "29", "30", "31", "32", "33"};
+        ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items2);
+        sectionSpinner.setAdapter(adapter2);
+    }
+
+    /**
+     * Creates spinner to select price for ticket
+     */
+    private void createpriceSpinner() {
+        priceSpinner = findViewById(R.id.priceSpinner);
+        String[] items3 = new String[]{" ----- ", "$5","$10" , "$15", "$20", "$25", "30", "$35", "$40", "$45", "$50", "$55", "$60", "$65", "$70", "$75", "$80", "$85", "$90", "$95", "$100", "$100+"};
+        ArrayAdapter<String> adapter3 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items3);
+        priceSpinner.setAdapter(adapter3);
     }
 
     public void openMainActivity2() {
         Intent intent = new Intent(this, MainActivity2.class);
         startActivity(intent);
     }
+
+
 }
