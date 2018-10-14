@@ -12,29 +12,23 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-        setContentView(R.layout.activity_splash_screen);
-        getSupportActionBar().hide();
-        LogoLauncher logoLauncher = new LogoLauncher();
-        logoLauncher.start();
-
-    }
-
-    private class LogoLauncher extends Thread {
-        public void run() {
-            try {
-                sleep(2000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        Thread myThread = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    sleep(1500);
+                    Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+                    startActivity(intent);
+                    finish();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
-
-            Intent intent = new Intent(SplashScreen.this, MainActivity2.class);
-            startActivity(intent);
-            SplashScreen.this.finish();
-        }
+        };
+        myThread.start();
     }
 }
+
+
+
 
